@@ -9,7 +9,7 @@ abstract class Sort {
 
     public abstract int[] sort();
 
-    protected final void swap(int[] array, int to, int from) {
+    protected final void swap(int to, int from) {
         int swap = array[to];
         array[to] = array[from];
         array[from] = swap;
@@ -19,5 +19,9 @@ abstract class Sort {
         final int[] returnArray = new int[array.length];
         System.arraycopy(array, 0, returnArray, 0, array.length);
         return returnArray;
+    }
+
+    public int getCount(){
+        return count;
     }
 }

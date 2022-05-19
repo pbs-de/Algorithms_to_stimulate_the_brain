@@ -7,7 +7,6 @@ final class SelectionSort extends Sort {
 
     @Override
     public int[] sort() {
-        System.out.println(this.getClass().getName());
         for (int i = 0; i < array.length; i++) {
             int minIndex = i;
             for (int j = i + 1; j < array.length; j++) {
@@ -16,9 +15,8 @@ final class SelectionSort extends Sort {
                 }
                 count++;
             }
-            super.swap(array, i, minIndex);
+            super.swap(i, minIndex);
         }
-        System.out.println("count = " + count);
         return copyArray(array);
     }
 }
